@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block page_content %}
+
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{% static 'img/doctor.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="promo-block-divider">
+                    <h1 class="promo-block-title">Dr.<br/>João Carlos</h1>
+                    <p class="promo-block-text">Neurologista &amp; Neurocirurgião</p>
+                </div>
+                <ul class="list-inline">
+                    <li><a href="#" class="social-icons"><i class="icon-social-facebook"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-dribbble"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-behance"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="blog">
+    <div class="bg-color-sky-light">
+        <div class="container content-lg">
+            <div class="row">
+                <div class="col-sm-3 sm-margin-b-30">
+                    <div class="text-right sm-text-left">
+                        <h2 class="margin-b-0">Blog</h2>
+                        <p><a href="{% url 'blog_index' %}">{% trans "todos" %}</a></p>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-sm-offset-1">
+                    <div class="row blog-post-item">
+                        <div class="col-md-12 col-xs-6 md-margin-b-30">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <a href="#"><h4>Como baixar e instalar o R e o RStudio no Mac</h4></a>
+                                </div>
+                                <div class="col-md-3" style="text-align: right;">
+                                    <p>12/02/2022</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                <a href="#">
+                                    <img style="width: 100%; height: 200px; padding-bottom: 20px;" src="{% static 'img/blue.png' %}" alt="JC Logo">
+                                </a>
+                                </div>
+                            </div>                            
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: justify;">
+                                    <p>Mauris nibh mi, ullamcorper id libero eget, blandit dapibus massa. Integer tristique in ligula eget consequat. 
+                                       Donec venenatis aliquam augue. Vivamus quis ante lectus. Donec commodo, tellus et malesuada lacinia, massa erat scelerisque ligula, ac tempor ex quam quis tellus. 
+                                       Nullam sollicitudin finibus rutrum. Vestibulum quis diam sit amet quam posuere ornare id et lectus. Ut tristique finibus metus, nec consequat sapien molestie sit amet. 
+                                       Proin in ullamcorper quam. Nullam in sapien in turpis laoreet tincidunt eu vel ligula. Integer lacinia erat sit amet dolor viverra, id imperdiet sapien auctor. 
+                                       Ut suscipit, enim id rhoncus mattis, diam lectus tristique nulla, semper scelerisque odio tellus ut leo. Etiam volutpat metus turpis, sit amet commodo nisi fringilla quis. 
+                                       Mauris urna urna, pellentesque quis pretium in, congue eget justo.</p>                            
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="row blog-post-item">
+                        <div class="col-md-12 col-xs-6 md-margin-b-30">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <a href="#"><h4>Por que todos deveriam aprender a programar?</h4></a>
+                                </div>
+                                <div class="col-md-3" style="text-align: right;">
+                                    <p>25/02/2022</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="#">
+                                        <img style="width: 100%; height: 200px; padding-bottom: 20px;" src="{% static 'img/blue.png' %}" alt="JC Logo">
+                                    </a>
+                                </div>
+                            </div>                            
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: justify;">
+                                    <p>Mauris nibh mi, ullamcorper id libero eget, blandit dapibus massa. Integer tristique in ligula eget consequat. 
+                                       Donec venenatis aliquam augue. Vivamus quis ante lectus. Donec commodo, tellus et malesuada lacinia, massa erat scelerisque ligula, ac tempor ex quam quis tellus. 
+                                       Nullam sollicitudin finibus rutrum. Vestibulum quis diam sit amet quam posuere ornare id et lectus. Ut tristique finibus metus, nec consequat sapien molestie sit amet. 
+                                       Proin in ullamcorper quam. Nullam in sapien in turpis laoreet tincidunt eu vel ligula. Integer lacinia erat sit amet dolor viverra, id imperdiet sapien auctor. 
+                                       Ut suscipit, enim id rhoncus mattis, diam lectus tristique nulla, semper scelerisque odio tellus ut leo. Etiam volutpat metus turpis, sit amet commodo nisi fringilla quis. 
+                                       Mauris urna urna, pellentesque quis pretium in, congue eget justo.</p>                            
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>                                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <section class="pt-page">        
+        <div class="blog-masonry">
+            {% for post in posts %}
+            <!-- Blog Post -->
+            <div class="item">
+                <div class="blog-card">
+                    <div class="media-block">
+                    <a href="{% url 'blog_detail' post.code%}">
+                        <img class="post-image img-responsive" src="{% static post.cover.url %}" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">{{ post.created_on.date.day }}</span><span class="month">{{ post.created_on.date | date:'M' }}</span><!--<span class="year">{{ post.created_on.date.year }}</span>--></div>
+                    </a>
+                    </div>
+                    <div class="post-info">
+                    <ul class="category">
+                        {% for category in post.categories.all %}
+                        <li><a href="{% url 'blog_category' category.value %}">{% trans category.value %}</a></li>{% if not forloop.last %} | {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'blog_detail' post.code%}"><h4 class="blog-item-title">{{ post.title }}</h4></a>
+                    <!-- <p>{{ post.body | slice:":400" }}...</p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- End of Blog Post -->
+            {% endfor %}
+        </div>
+    </section>
+
+
+    
+{% endblock %}

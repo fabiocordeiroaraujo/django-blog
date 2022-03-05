@@ -1072,8 +1072,8 @@ fieldset[disabled] .btn-theme {
 }
 
 .content-lg {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 60px;
 }
 
 /*------------------------------------------------------------------
@@ -1436,4 +1436,11 @@ fieldset[disabled] .btn-theme {
   .xs-text-right {
     text-align: right;
   }
+}
+
+/*------------------------------------------------------------------
+    [Blog]
+------------------------------------------------------------------*/
+.blog-post-item {
+  padding-bottom: 30px;
 }

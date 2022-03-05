@@ -37,11 +37,11 @@
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="nav navbar-nav navbar-nav-right">
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#inicio">Início</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#curriculo">Currículo</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#sintomas">Sintomas</a></li>                                
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#blog">Blog</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contato">Contato</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#inicio">Início</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sobre">Sobre mim</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sintomas">Sintomas</a></li>                                
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#contato">Contato</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'blog_index' %}#blog">Blog</a></li>                                
                             </ul>
                         </div>
                     </div>
@@ -51,6 +51,7 @@
 
         {% block page_content %}{% endblock %}       
 
+        <!-- style="border-top: 0.1px solid #f0f0f0;" -->
         <footer class="footer">
             <div class="content container">
                 <div class="row">                    

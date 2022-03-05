@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -37,12 +38,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'blog.urls'
+ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": ["blog/templates/"],
+        "DIRS": ["mysite/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -56,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'blog.wsgi.application'
+WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Database
@@ -99,7 +100,7 @@ LANGUAGES = (
 )
 
 LOCALE_PATHS = [ 
-    os.path.join(BASE_DIR, 'blog/templates/locale'),
+    os.path.join(BASE_DIR, 'mysite/templates/locale'),
 ]
 
 TIME_ZONE = 'UTC'
@@ -117,7 +118,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "blog/static"),
+    os.path.join(BASE_DIR, "mysite/static"),
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

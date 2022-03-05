@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block page_content %}
+<!-- Blog Subpage -->
+<section class="pt-page">
+    <div class="section-title-block">
+        <h2 class="section-title">Blog</h2>
+        <h5 class="section-description">
+            <a href="{% url 'blog_index' %}">{% trans "todos" %}</a>                
+                {% if category %} 
+                / <a href="{% url 'blog_category' category.value %}">{% trans category.value %}</a>
+                {% endif %}
+        </h5>
+        <!-- {% include "language.html" %} -->
+    </div>
+    <div class="blog-masonry">
+        {% for post in posts %}
+        <!-- Blog Post -->
+        <div class="item">
+            <div class="blog-card">
+                <div class="media-block">
+                <a href="{% url 'blog_detail' post.code%}">
+                    <img class="post-image img-responsive" src="{% static post.cover.url %}" alt="blog-post-1" />
+                    <div class="mask"></div>
+                    <div class="post-date"><span class="day">{{ post.created_on.date.day }}</span><span class="month">{{ post.created_on.date | date:'M' }}</span><!--<span class="year">{{ post.created_on.date.year }}</span>--></div>
+                </a>
+                </div>
+                <div class="post-info">
+                <ul class="category">
+                    {% for category in post.categories.all %}
+                    <li><a href="{% url 'blog_category' category.value %}">{% trans category.value %}</a></li>{% if not forloop.last %} | {% endif %}
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'blog_detail' post.code%}"><h4 class="blog-item-title">{{ post.title }}</h4></a>
+                <!-- <p>{{ post.body | slice:":400" }}...</p> -->
+                </div>
+            </div>
+        </div>
+        <!-- End of Blog Post -->
+        {% endfor %}
+    </div>
+</section>
+<!-- End Blog Subpage -->
+{% endblock %}
