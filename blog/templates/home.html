@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{% static 'img/doctor.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="promo-block-divider">
+                    <h1 class="promo-block-title">Dr.<br/>João Carlos</h1>
+                    <p class="promo-block-text">Neurologista &amp; Neurocirurgião</p>
+                </div>
+                <ul class="list-inline">
+                    <li><a href="#" class="social-icons"><i class="icon-social-facebook"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-dribbble"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-behance"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "curriculo.html" %}
+{% include "sintomas.html" %}
+{% include "blog.html" %}
+{% include "contato.html" %}
+
+{% endblock %}

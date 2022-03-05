@@ -1,0 +1,8 @@
+1) mkvirtualenv blog-portfolio
+2) pip3 install --upgrade pip
+3) pip3 install django 
+4) django-admin startproject blog 
+5) python manage.py migrate
+6) python manage.py collectstatic
+7) python manage.py runserver
+
