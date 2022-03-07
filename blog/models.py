@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Image(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="blog/static/img/")
+    image = models.ImageField(upload_to="mysite/static/img/")
 
     def __str__( self ):
         return self.name
@@ -23,8 +23,8 @@ class Image(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    brother_code = models.CharField(max_length=128, null=True)
-    code = models.CharField(max_length=128)
+    code = models.CharField(max_length=128, null=True)
+    url = models.CharField(max_length=128)
     body = models.TextField()
     active = models.BooleanField(default=True)
     language = models.CharField(
@@ -33,8 +33,8 @@ class Post(models.Model):
         default='pt-br',
     )
     created_on = models.DateTimeField(auto_now_add=True)
-    last_modified = models.DateTimeField(auto_now=True)
-    cover = models.ImageField(upload_to='img/')
+    last_modified = models.DateTimeField(auto_now=True)    
+    cover = models.ImageField(upload_to='mysite/static/img/')
     categories = models.ManyToManyField('Category', related_name='posts')
 
     def __str__( self ):
