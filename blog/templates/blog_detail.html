@@ -10,20 +10,20 @@
 <div id="categorie">
     <div class="container content-blog">    
         <div class="row blog-categories">
-            <div class="col-md-2" style="padding-left: 0px;">
-                <a class="blog-category" href="{% url 'blog_index' %}">Voltar</a>
-            </div>
-            <div class="col-md-10" style="text-align: right;">
+            <div class="col-md-12" style="padding-left: 0px;">                
                 <ul class="tags" style="list-style-type:none; padding-left: 0px;">
+                    <li class="blog-category">
+                        <strong><a href="{% url 'blog_index' %}#blog">{% trans "todos" %}</a></strong>
+                    </li>
                     {% for category in post.categories.all %}
-                        <li class="blog-category">
-                            <a href="{% url 'blog_category' category.value %}">
-                                {% trans category.value %}
+                        <li class="blog-category"> |
+                            <a href="{% url 'blog_category' category.name %}#blog">
+                                {% trans category.name %}
                             </a>
-                        </li>{% if not forloop.last %} <li class="blog-category">|</li> {% endif %}
+                        </li>
                     {% endfor %}                
                 </ul>
-            </div>                
+            </div>                       
         </div>        
     </div>
 </div>

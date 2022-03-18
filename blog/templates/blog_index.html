@@ -52,7 +52,7 @@
                                         {% for category in post.categories.all %}
                                         <li class="blog-category">
                                             <a href="{% url 'blog_category' category.name %}#blog">
-                                                <strong>{% trans category.value %}</strong>
+                                                <strong>{% trans category.name %}</strong>
                                             </a>
                                         </li>{% if not forloop.last %} <li class="blog-category">|</li> {% endif %}
                                         {% endfor %}

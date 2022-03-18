@@ -38,10 +38,10 @@ def blog_detail(request, url):
     if request.method == 'POST':
         form = CommentForm(request.POST)
 
-        if form.is_valid():
+        if form.is_valid():            
             brothers = Post.objects.filter(
                 code=post.code, active=True
-            )
+            )            
             for brother in brothers:
                 comment = Comment(
                     author=form.cleaned_data["author"],

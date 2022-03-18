@@ -16,11 +16,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: blog/forms.py:9
 msgid "your_name"
-msgstr "Seu nome"
+msgstr "Your name"
 
 #: blog/forms.py:16 mysite/templates/contato.html:23
 msgid "email"
@@ -28,27 +28,27 @@ msgstr "Email"
 
 #: blog/forms.py:23
 msgid "deixe_comentatio"
-msgstr "Deixe um comentário"
+msgstr "Leave a comment"
 
 #: mysite/templates/base.html:42
 msgid "home"
-msgstr "Início"
+msgstr "Home"
 
 #: mysite/templates/base.html:43 mysite/templates/sobre.html:7
 msgid "about_me"
-msgstr "Sobre mim"
+msgstr "About Me"
 
 #: mysite/templates/base.html:44 mysite/templates/sintomas.html:8
 msgid "symptoms"
-msgstr "Sintomas"
+msgstr "Symptoms"
 
 #: mysite/templates/base.html:45 mysite/templates/depoimentos.html:8
 msgid "testimony"
-msgstr "Depoimentos"
+msgstr "Testimony"
 
 #: mysite/templates/base.html:46 mysite/templates/contato.html:8
 msgid "contact"
-msgstr "Contato"
+msgstr "Contact"
 
 #: mysite/templates/base.html:47
 msgid "blog"
@@ -56,19 +56,19 @@ msgstr "Blog"
 
 #: mysite/templates/base.html:67
 msgid "developed_by"
-msgstr "Desenvolvido por"
+msgstr "Developed by"
 
 #: mysite/templates/base.html:69
 msgid "theme"
-msgstr "Tema"
+msgstr "Theme"
 
 #: mysite/templates/contato.html:9
 msgid "talk_to_me"
-msgstr "Fale comigo"
+msgstr "Talk to Me"
 
 #: mysite/templates/contato.html:15
 msgid "brazil"
-msgstr "Brasil"
+msgstr "Brazil"
 
 #: mysite/templates/contato.html:16
 msgid "recife"
@@ -80,7 +80,7 @@ msgstr "Pernambuco"
 
 #: mysite/templates/contato.html:19
 msgid "fone"
-msgstr "Fone"
+msgstr "Phone"
 
 #: mysite/templates/contato.html:27
 msgid "web"
@@ -88,196 +88,193 @@ msgstr "Web"
 
 #: mysite/templates/curriculo.html:8
 msgid "resume"
-msgstr "Currículo"
+msgstr "Resume"
 
 #: mysite/templates/curriculo.html:9
 msgid "training_and_specializations"
-msgstr "Formações e Especializações"
+msgstr "Training and Specializations"
 
 #: mysite/templates/curriculo.html:14
 msgid "graduated_in_medicine_from_the_international_university_of_pernambuco"
-msgstr "Graduado em Medicina pela Universidade Internacional de Pernambuco"
+msgstr "Graduated in Medicine from the International University of Pernambuco"
 
 #: mysite/templates/curriculo.html:15
 msgid "specialist_in_interdisciplinary_pain_management_at_the_united_nations_international_hospital"
 msgstr ""
-"Especialista em Tratamento Interdisciplinar da Dor pelo Hospital "
-"Internacional das Nações Unidas"
+"Specialist in Interdisciplinary Pain Management at the United Nations "
+"International Hospital"
 
 #: mysite/templates/curriculo.html:16
 msgid "residency_in_spine_surgery_at_cleveland_hospital_in_the_united_states"
-msgstr ""
-"Residência em Cirurgia da Coluna Vertebral pelo Cleveland Hospital nos "
-"Estados Unidos"
+msgstr "Residency in Spine Surgery at Cleveland Hospital in The United States"
 
 #: mysite/templates/curriculo.html:17
 msgid "residency_in_head_and_neck_surgery_at_hospital_pernambucano_of_neurosurgery"
 msgstr ""
-"Residência em Cirurgia de Cabeça e Pescoço pelo Hospital Pernambucano de "
-"Neurocirurgia"
+"Residency in Head and Neck Surgery at Hospital Pernambucano of Neurosurgery"
 
 #: mysite/templates/curriculo.html:18
 msgid "effective_member_of_the_SBCCP"
-msgstr "Membro efetivo da SBCCP"
+msgstr "Effective Member of the SBCCP"
 
 #: mysite/templates/depoimentos.html:9
 msgid "dear_patients"
-msgstr "Pacientes Queridos"
+msgstr "Dear Patients"
 
 #: mysite/templates/depoimentos.html:22
 msgid "fabio_testimony"
 msgstr ""
-"Excelente profissional, pontual e com grande conhecimento científico. Foi um "
-"prazer conhecer seu profissionalismo."
+"Excellent professional, punctual and with great scientific knowledge. It was "
+"a Nice to know your professionalism."
 
 #: mysite/templates/depoimentos.html:38
 msgid "thayse_testimony"
 msgstr ""
-"Médico bastante atencioso, detalhou e explicou bem. Super indico! Muito "
-"competente e com uma humanidade incrível. Recomendo de olhos fechados. Um "
-"dos melhores neurologista que conheço."
+"Very attentive doctor, detailed and explained well. I highly recommend! "
+"competent and with an incredible humanity. I recommend it with my eyes "
+"closed. A one of the best neurologists I know."
 
 #: mysite/templates/depoimentos.html:55
 msgid "maria_testimony"
 msgstr ""
-"O Dr. João Carlos é especial para mim. Um médico muito atencioso que "
-"entendeu o meu problema e me fez voltar a ter uma vida boa e confortável."
+"Dr. João Carlos is special to me. A very attentive doctor who he understood "
+"my problem and got me back to a good and comfortable life."
 
 #: mysite/templates/experiencia.html:7
 msgid "experience"
-msgstr "Experiência"
+msgstr "Experience"
 
 #: mysite/templates/experiencia.html:8
 msgid "in_each_surgery,"
-msgstr "Em cada cirurgia,"
+msgstr "In Each Surgery"
 
 #: mysite/templates/experiencia.html:8
 msgid "an_accomplishment"
-msgstr "uma realização"
+msgstr "An Accomplishment"
 
 #: mysite/templates/experiencia.html:13
 msgid "total_surgeries_performed"
-msgstr "Total de Cirurgias Realizadas"
+msgstr "Total Surgeries Performed"
 
 #: mysite/templates/experiencia.html:19
 msgid "neurosurgery"
-msgstr "Neurocirurgia"
+msgstr "Neurosurgery"
 
 #: mysite/templates/experiencia.html:25
 msgid "spine_surgery"
-msgstr "Cirurgia da Coluna Vertebral"
+msgstr "Spine Surgery"
 
 #: mysite/templates/experiencia.html:31
 msgid "peripheral_nerve_surgery"
-msgstr "Cirurgia de Nervos Periféricos"
+msgstr "Peripheral Nerve Surgery"
 
 #: mysite/templates/home.html:12
 msgid "neurologist"
-msgstr "Neurologista"
+msgstr "Neurologist"
 
 #: mysite/templates/home.html:12
 msgid "neurosurgeon"
-msgstr "Neurocirurgião"
+msgstr "Neurosurgeon"
 
 #: mysite/templates/sintomas.html:9
 msgid "when_to_look_for_an_expert?"
-msgstr "Quando procurar um especialista?"
+msgstr "When to look for an expert?"
 
 #: mysite/templates/sintomas.html:20
 msgid "headache"
-msgstr "Dor de Cabeça"
+msgstr "Headache"
 
 #: mysite/templates/sintomas.html:21
 msgid "headache_description"
 msgstr ""
-"A dor de cabeça crônica ou a chamada enxaqueca, principalmente se "
-"acompanhada de vômito, alterações na visão ou quando se agrava com "
-"exercícios físicos, deve ser avaliada por um especialista."
+"Chronic headache or so-called migraine, especially if accompanied by "
+"vomiting, changes in vision, or when worsening with physical exercises, "
+"should be evaluated by an expert."
 
 #: mysite/templates/sintomas.html:32
 msgid "back_pain"
-msgstr "Dor na Coluna"
+msgstr "Back Pain"
 
 #: mysite/templates/sintomas.html:33
 msgid "back_pain_description"
 msgstr ""
-"Quando há indícios de compressão nervosa pode ser necessário procurar um "
-"neurologista ou neurocirurgião."
+"When there are signs of nerve compression, it may be necessary to look for a "
+"neurologist or neurosurgeon."
 
 #: mysite/templates/sintomas.html:44
 msgid "muscle_weakness"
-msgstr "Fraqueza Muscular"
+msgstr "Muscle Weakness"
 
 #: mysite/templates/sintomas.html:45
 msgid "muscle_weakness_description"
 msgstr ""
-"Quando ocorre com frequência, vem acompanhada de dificuldade de respirar, "
-"falar mastigar ou engolir e a dor e os sintomas apresentam-se resistentes, "
-"pode ser necessário procurar um neurocirurgião."
+"When it occurs frequently, it is accompanied by difficulty breathing,talk, "
+"chew or swallow and the pain and symptoms are resistant, you may need to see "
+"a neurosurgeon."
 
 #: mysite/templates/sintomas.html:59
 msgid "brain_tumour"
-msgstr "Tumor Cerebral"
+msgstr "Brain Tumour"
 
 #: mysite/templates/sintomas.html:60
 msgid "brain_tumour_description"
 msgstr ""
-"A maioria das incidências de câncer cerebral tem origem secundária, são "
-"metástases de outra parte do corpo. As causas do câncer são desconhecidas e "
-"a doença dificilmente apresenta sintomas."
+"Most incidences of brain cancer have a secondary origin, are metastases from "
+"another part of the body. The causes of cancer are unknown and the disease "
+"hardly has any symptoms."
 
 #: mysite/templates/sintomas.html:71
 msgid "brain_aneurysm"
-msgstr "Aneurisma Cerebral"
+msgstr "Brain Aneurysm"
 
 #: mysite/templates/sintomas.html:72
 msgid "brain_aneurysm_description"
 msgstr ""
-"A escolha do método para o tratamento do aneurisma cerebral vai depender de "
-"diversos fatores como condições clínicas do paciente, idade e localização do "
-"aneurisma, além de seu tamanho."
+"The choice of method for the treatment of cerebral aneurysm will depend on "
+"various factors such as the patient's clinical conditions, age and location "
+"of the aneurysm, in addition to its size."
 
 #: mysite/templates/sintomas.html:83
 msgid "functional_neurosurgery"
-msgstr "Neurocirurgia Funcional"
+msgstr "Functional Neurosurgery"
 
 #: mysite/templates/sintomas.html:84
 msgid "functional_neurosurgery_description"
 msgstr ""
-"A neurocirurgia está direcionada ao tratamento de doenças relacionadas ao "
-"cérebro, abrangendo diagnósticos e cuidados dos pacientes com lesões ou "
-"doenças também da coluna, medula e nervos periféricos."
+"Neurosurgery is aimed at the treatment of diseases related to brain, "
+"covering diagnosis and care of patients with injuries or diseases also of "
+"the spine, spinal cord and peripheral nerves."
 
 #: mysite/templates/sobre.html:8
 msgid "who_am_i?"
-msgstr "Quem sou eu?"
+msgstr "Who am I"
 
 #: mysite/templates/sobre.html:13
 msgid "who_am_i_p1"
 msgstr ""
-"Apaixonado por neurocirurgia, o Dr. João Carlos se tornou especialista no "
-"tratamento da dor e tem como principal objetivo ajudar as pessoas a viverem "
-"mais e melhor. Estudou cirurgia da coluna vertebral em Cleveland, nos "
-"Estados Unidos e é especialista em avaliação e tratamento interdisciplinar "
-"da dor pelo Hospital Internacional das Nações Unidas em Genebra, Suiça."
+"Passionate about neurosurgery, Dr. João Carlos became a specialist in pain "
+"treatment and its main objective is to help people to liveMore and Better. "
+"He Studied Spinal Surgery in Cleveland, USUnited States and is an expert in "
+"interdisciplinary assessment and treatmentof pain by the United Nations "
+"International Hospital in Geneva, Switzerland."
 
 #: mysite/templates/sobre.html:14
 msgid "who_am_i_p2"
 msgstr ""
-"Com mais de 10 anos de experiência, o Dr. João Carlos vem dedicando o seu "
-"desenvolvimento profissional em prol de seus pacientes. É experiente em "
-"diversas patologias das áreas de neurocirurgia, cirurgia da coluna vertebral "
-"e de nervos periféricos. Além disso, tem amplo conhecimento na condução e no "
-"tratamento de pacientes com dores crônicas. Seu foco está no cuidado "
-"integral do paciente, buscando sempre priorizar o uso de técnicas "
-"minimamente invasivas em suas cirurgias."
+"With over 10 years of experience, Dr. João Carlos has been dedicating his "
+"professional development for the benefit of its patients. It is experienced "
+"in various pathologies in the areas of neurosurgery, spinal surgeryand "
+"peripheral nerves. In addition, he has extensive knowledge of conduction "
+"andtreatment of patients with chronic pain. Your focus is on care integral "
+"patient, always seeking to prioritize the use of techniquesminimally "
+"invasive in their surgeries."
 
 #: mysite/templates/sobre.html:16
 msgid "aristotle_word"
 msgstr ""
-"&quot;O melhor médico é aquele que recebe os que foram desenganados por "
-"todos os outros.&quot;"
+"&quot;The best doctor is the one who receives those who have been "
+"disillusioned by everyone else."
 
 #: mysite/templates/sobre.html:18
 msgid "aristotle"
-msgstr "Aristóteles"
+msgstr "Aristotle"
