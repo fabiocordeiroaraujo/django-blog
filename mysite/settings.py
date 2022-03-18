@@ -13,7 +13,7 @@ SECRET_KEY = 'x_#h8fm*m!jtrdrf11&f6@sr5yit_^z$8g7w0jzo$hrd+_vyi1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -93,14 +93,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
+
 LANGUAGES = (
     ('pt-br', u'Português'),
-    ('en-us', u'English'),
+    ('en', u'English'),
 )
 
 LOCALE_PATHS = [ 
     os.path.join(BASE_DIR, 'mysite/templates/locale'),
+    os.path.join(BASE_DIR, 'blog/templates/locale'),
 ]
 
 TIME_ZONE = 'UTC'

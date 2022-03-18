@@ -11,4 +11,7 @@
     - user: admin
     - password: admin123456
 11) python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemessages --locale=pt_br
+python manage.py compilemessages
 

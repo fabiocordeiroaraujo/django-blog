@@ -1,22 +1,21 @@
+{% load i18n %}
 <div id="sobre">
     <div class="container content-lg">
         <div class="row">
             <div class="col-sm-2 sm-margin-b-30">
                 <div class="text-right sm-text-left">
-                    <h2 class="margin-b-0">Sobre Mim</h2>
-                    <p>Quem sou eu?</p>
+                    <h2 class="margin-b-0">{% trans "about_me" %}</h2>
+                    <p>{% trans "who_am_i?" %}</p>
                 </div>
             </div>
             <div class="col-sm-9 col-sm-offset-1">                
                 <div class="margin-b-30">
-                    <p>Apaixonado por neurocirurgia, o Dr. João Carlos se tornou especialista no tratamento da dor e tem como principal objetivo ajudar as pessoas a viverem mais e melhor. 
-                    Estudou cirurgia da coluna vertebral em Cleveland, nos Estados Unidos e é especialista em avaliação e tratamento interdisciplinar da dor pelo Hospital Internacional das Nações Unidas em Genebra, Suiça.</p>                                                                        
-                    <p>Com mais de 10 anos de experiência, o Dr. João Carlos vem dedicando o seu desenvolvimento profissional em prol de seus pacientes. 
-                        É experiente em diversas patologias das áreas de neurocirurgia, cirurgia da coluna vertebral e de nervos periféricos. Além disso, tem amplo conhecimento na condução e no tratamento de pacientes com dores crônicas. Seu foco está no cuidado integral do paciente, buscando sempre priorizar o uso de técnicas minimamente invasivas em suas cirurgias.</p>                                       
+                    <p>{% trans "who_am_i_p1" %}</p>                                                                        
+                    <p>{% trans "who_am_i_p2" %}</p>                                       
                     <hr />                  
-                    <p style="text-align: justify;">"O melhor médico é aquele que recebe os que foram desenganados por todos os outros."</p>
+                    <p style="text-align: justify;">{% trans "aristotle_word" %}</p>
                     <hr />   
-                    <p style="text-align: right;">- Aristóteles</p>                                             
+                    <p style="text-align: right;">- {% trans "aristotle" %}</p>                                             
                 </div>                                                                 
             </div>
         </div>                        

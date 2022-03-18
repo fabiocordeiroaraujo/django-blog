@@ -3,19 +3,17 @@
 {% load i18n %}
 {% block page_content %}
 
-<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{% static 'img/doctor.png' %}">
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{% static 'img/doctor-blog.png' %}">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="promo-block-divider">
                     <h1 class="promo-block-title">Dr.<br/>João Carlos</h1>
-                    <p class="promo-block-text">Neurologista &amp; Neurocirurgião</p>
+                    <p class="promo-block-text">{% trans "neurologist" %} &amp; {% trans "neurosurgeon" %}</p>
                 </div>
                 <ul class="list-inline">
                     <li><a href="#" class="social-icons"><i class="icon-social-facebook"></i></a></li>
-                    <li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>
-                    <li><a href="#" class="social-icons"><i class="icon-social-dribbble"></i></a></li>
-                    <li><a href="#" class="social-icons"><i class="icon-social-behance"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>                    
                     <li><a href="#" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
                 </ul>
             </div>
@@ -24,33 +22,26 @@
 </div>
 
 <div id="blog">
-    <div class="bg-color-sky-light">
+    <div class="bg-color-sky-light" data-auto-height="true">
         <div class="container content-lg">
             <div class="row">
-                <div class="col-sm-1 sm-margin-b-30">
+                <div class="col-sm-2 sm-margin-b-30">
                     <div class="text-right sm-text-left">
-                        <h2 class="margin-b-0">Blog</h2>
-                        <p><a href="{% url 'blog_index' %}">{% trans "todos" %}</a></p>
+                        <h2 class="margin-b-0">{% trans "blog" %}</h2>
+                        <p><strong><a href="{% url 'blog_index' %}#blog">{% trans "todos" %}</a></strong></p>
                     </div>
                 </div>
-                <div class="col-sm-10 col-sm-offset-1">
+                <div class="col-sm-9 col-sm-offset-1">
                     {% for post in posts %}
                     <div class="row blog-post-item">
-                        <div class="col-md-12 col-xs-6 md-margin-b-30">
-                            <!-- <div class="row">
-                                <div class="col-md-12">
-                                    <a href="{% url 'blog_detail' post.url%}">
-                                        <img class="blog-cover" src="{{post.cover.name  | cut:'mysite'}} " alt="blog-post">
-                                    </a>
-                                </div>                                
-                            </div>    -->
+                        <div class="col-md-12 md-margin-b-30">                            
                             <div class="row">
                                 <div class="col-md-10">
                                     <a href="{% url 'blog_detail' post.url%}"><h4 class="blog-title">{{ post.title }}</h4></a>
                                 </div>    
                                 <div class="col-md-2">
                                     <div class="blog-date">
-                                        <span>{{ post.created_on.date.day }} de {{ post.created_on.date | date:'M' }}</span>
+                                        <span>{{ post.created_on.date.day }} {% trans "de" %} {{ post.created_on.date | date:'M' }}</span>
                                         <!-- <span>{{ post.created_on.date.year }}</span> -->
                                     </div>
                                 </div>                              
@@ -60,7 +51,9 @@
                                     <ul class="blog-category">
                                         {% for category in post.categories.all %}
                                         <li class="blog-category">
-                                            <a href="{% url 'blog_category' category.value %}"><strong>{% trans category.value %}</strong></a>
+                                            <a href="{% url 'blog_category' category.name %}#blog">
+                                                <strong>{% trans category.value %}</strong>
+                                            </a>
                                         </li>{% if not forloop.last %} <li class="blog-category">|</li> {% endif %}
                                         {% endfor %}
                                     </ul>
@@ -68,7 +61,7 @@
                             </div>                                                 
                             <div class="row">
                                 <div class="col-md-12" style="text-align: justify;">
-                                    <p>{{ post.body | slice:":400" }}...</p>                            
+                                    <p>{{ post.body | safe | slice:":400" }} (...)</p>                         
                                 </div>
                             </div>
                         </div>                        

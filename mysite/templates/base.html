@@ -30,7 +30,7 @@
                             <span class="toggle-icon"></span>
                         </button>
                         <div class="logo">
-                            <a class="nav-item-child nav-item-hover" style="padding-top: 10px" href="#inicio">
+                            <a class="nav-item-child nav-item-hover" style="padding-top: 10px" href="{% url 'home' %}">
                                 <img class="logo-img logo-img-main" src="{% static 'img/jc-logo.png' %}" alt="JC Logo">
                                 <img class="logo-img logo-img-active" src="{% static 'img/jc-logo-dark.png' %}" alt="JC Logo">                              
                             </a>
@@ -39,12 +39,12 @@
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="nav navbar-nav navbar-nav-right">
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#inicio">Início</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sobre">Sobre mim</a></li>                                
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sintomas">Sintomas</a></li> 
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#depoimentos">Depoimentos</a></li>                               
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#contato">Contato</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'blog_index' %}">Blog</a></li>                                
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#inicio">{% trans "home" %}</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sobre">{% trans "about_me" %}</a></li>                                
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sintomas">{% trans "symptoms" %}</a></li> 
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#depoimentos">{% trans "testimony" %}</a></li>                               
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#contato">{% trans "contact" %}</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'blog_index' %}">{% trans "blog" %}</a></li>                                
                             </ul>
                         </div>
                     </div>
@@ -53,20 +53,21 @@
         </header>
 
         {% block page_content %}{% endblock %}       
-
-        <!-- style="border-top: 0.1px solid #f0f0f0;" -->
+        
         <footer class="footer">
             <div class="content container">
                 <div class="row">                    
-                    <div class="col-xs-6" style="padding-left: 20px; padding-top: 25px; padding-bottom: 15px;">
-                        <p class="margin-b-0">
-                            <strong>Dr. João Carlos</strong> | Neurocirurgião | CRM-PE: 12345678910
+                    <div class="col-xs-6" style="padding-left: 20px; padding-top: 25px; padding-bottom: 25px;">
+                        <p class="margin-b-0 sm-text">
+                            Dr. João Carlos | CRM-PE: 12345678910
                         </p>
                     </div>                
-                    <div class="col-xs-6 text-right sm-text-left" style="padding-top: 25px; padding-bottom: 15px;">
-                        <p class="margin-b-0">                            
-                            Desenvolvido por <a href="https://www.fabiocordeiroaraujo.com/"><strong>Fabio Araujo</strong></a>
-                            | Tema <a class="fweight-700" href="http://keenthemes.com/preview/aircv/">Aircv</a>
+                    <div class="col-xs-6 text-right sm-text-left" style="padding-top: 25px; padding-bottom: 25px;">
+                        <p class="margin-b-0 sm-text">                            
+                            {% trans "developed_by" %} 
+                            <a href="https://www.fabiocordeiroaraujo.com/"><strong>Fabio Araujo</strong></a>
+                            | {% trans "theme" %} 
+                            <a class="fweight-700" href="http://keenthemes.com/preview/aircv/">Aircv</a>
                         </p>
                     </div>
                 </div>

@@ -19,20 +19,20 @@ def blog_index(request):
 def blog_category(request, category):
     lang = translation.get_language()
     posts = Post.objects.filter(
-        categories__value__contains=category, language=lang, active=True
+        categories__name__contains=category, language=lang, active=True
     ).order_by(
         '-created_on'
     )
-    categoryObj = Category.objects.get(value=category)
+    categoryObj = Category.objects.get(name=category)    
     context = {
         "category": categoryObj,
         "posts": posts
     }
     return render(request, "blog_category.html", context)
 
-def blog_detail(request, code):
+def blog_detail(request, url):
     lang = translation.get_language()
-    post = Post.objects.get(code=code, language=lang)
+    post = Post.objects.get(url=url, language=lang)
     form = CommentForm()
 
     if request.method == 'POST':
@@ -40,7 +40,7 @@ def blog_detail(request, code):
 
         if form.is_valid():
             brothers = Post.objects.filter(
-                brother_code=post.brother_code, active=True
+                code=post.code, active=True
             )
             for brother in brothers:
                 comment = Comment(

@@ -2,44 +2,80 @@
 {% load static %}
 {% load i18n %}
 {% block page_content %}
-<!-- Blog Subpage -->
-<section class="pt-page">
-    <div class="section-title-block">
-        <h2 class="section-title">Blog</h2>
-        <h5 class="section-description">
-            <a href="{% url 'blog_index' %}">{% trans "todos" %}</a>                
-                {% if category %} 
-                / <a href="{% url 'blog_category' category.value %}">{% trans category.value %}</a>
-                {% endif %}
-        </h5>
-        <!-- {% include "language.html" %} -->
-    </div>
-    <div class="blog-masonry">
-        {% for post in posts %}
-        <!-- Blog Post -->
-        <div class="item">
-            <div class="blog-card">
-                <div class="media-block">
-                <a href="{% url 'blog_detail' post.code%}">
-                    <img class="post-image img-responsive" src="{% static post.cover.url %}" alt="blog-post-1" />
-                    <div class="mask"></div>
-                    <div class="post-date"><span class="day">{{ post.created_on.date.day }}</span><span class="month">{{ post.created_on.date | date:'M' }}</span><!--<span class="year">{{ post.created_on.date.year }}</span>--></div>
-                </a>
+
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{% static 'img/doctor-blog.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="promo-block-divider">
+                    <h1 class="promo-block-title">Dr.<br/>João Carlos</h1>
+                    <p class="promo-block-text">{% trans "neurologist" %} &amp; {% trans "neurosurgeon" %}</p>
                 </div>
-                <div class="post-info">
-                <ul class="category">
-                    {% for category in post.categories.all %}
-                    <li><a href="{% url 'blog_category' category.value %}">{% trans category.value %}</a></li>{% if not forloop.last %} | {% endif %}
-                    {% endfor %}
+                <ul class="list-inline">
+                    <li><a href="#" class="social-icons"><i class="icon-social-facebook"></i></a></li>
+                    <li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>                    
+                    <li><a href="#" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
                 </ul>
-                <a href="{% url 'blog_detail' post.code%}"><h4 class="blog-item-title">{{ post.title }}</h4></a>
-                <!-- <p>{{ post.body | slice:":400" }}...</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="blog">
+    <div class="bg-color-sky-light" data-auto-height="true">
+        <div class="container content-lg">
+            <div class="row">
+                <div class="col-sm-2 sm-margin-b-30">
+                    <div class="text-right sm-text-left">
+                        <h2 class="margin-b-0">{% trans "blog" %}</h2>
+                        <p>
+                            <strong><a href="{% url 'blog_index' %}#blog">{% trans "todos" %}</a></strong>             
+                            {% if category %} 
+                            | <strong><a href="{% url 'blog_category' category.name %}#blog">{% trans category.value %}</a></strong>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-sm-offset-1">
+                    {% for post in posts %}
+                    <div class="row blog-post-item">
+                        <div class="col-md-12 md-margin-b-30">                            
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <a href="{% url 'blog_detail' post.url%}"><h4 class="blog-title">{{ post.title }}</h4></a>
+                                </div>    
+                                <div class="col-md-2">
+                                    <div class="blog-date">
+                                        <span>{{ post.created_on.date.day }} {% trans "de" %} {{ post.created_on.date | date:'M' }}</span>
+                                        <!-- <span>{{ post.created_on.date.year }}</span> -->
+                                    </div>
+                                </div>                              
+                            </div>    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="blog-category">
+                                        {% for category in post.categories.all %}
+                                        <li class="blog-category">
+                                            <a href="{% url 'blog_category' category.name %}#blog">
+                                                <strong>{% trans category.value %}</strong>
+                                            </a>
+                                        </li>{% if not forloop.last %} <li class="blog-category">|</li> {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>                                                                                              
+                            </div>                                                 
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: justify;">
+                                    <p>{{ post.body | safe | slice:":450" }} (...)</p>                            
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    {% endfor %}                                                         
                 </div>
             </div>
         </div>
-        <!-- End of Blog Post -->
-        {% endfor %}
     </div>
-</section>
-<!-- End Blog Subpage -->
+</div>
+    
 {% endblock %}
