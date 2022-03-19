@@ -1,0 +1,96 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">   
+
+    <head>                      
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dr. João Carlos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="Dr. João Carlos - Neurocirurgião" />
+        <meta name="keywords" content="neurocirurgião, medicina, cabeça, pescoço, brasil, recife, pernambuco, doutor, joão, carlos" />
+        <meta name="author" content="fabio.cordeiro.arauo@gmail.com" />        
+
+        <!-- <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"> -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/w3.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'simple-line-icons/css/simple-line-icons.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">        
+    </head>    
+
+    <body id="inicio" data-spy="scroll" data-target=".header">
+        <header class="header navbar-fixed-top">
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">                            
+                            <span class="toggle-icon"></span>
+                        </button>
+                        <div class="logo">
+                            <a class="nav-item-child nav-item-hover" style="padding-top: 10px" href="{% url 'home' %}">
+                                <img class="logo-img logo-img-main" src="{% static 'img/jc-logo.png' %}" alt="JC Logo">
+                                <img class="logo-img logo-img-active" src="{% static 'img/jc-logo-dark.png' %}" alt="JC Logo">                              
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#inicio">{% trans "home" %}</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sobre">{% trans "about_me" %}</a></li>                                
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#sintomas">{% trans "symptoms" %}</a></li> 
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#depoimentos">{% trans "testimony" %}</a></li>                               
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'home' %}#contato">{% trans "contact" %}</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{% url 'blog_index' %}">{% trans "blog" %}</a></li>                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        {% block page_content %}{% endblock %}       
+        
+        <footer class="footer">
+            <div class="content container">
+                <div class="row">                    
+                    <div class="col-xs-6" style="padding-left: 20px; padding-top: 25px; padding-bottom: 25px;">
+                        <p class="margin-b-0 sm-text">
+                            Dr. João Carlos | CRM-PE: 12345678910
+                        </p>
+                    </div>                
+                    <div class="col-xs-6 text-right sm-text-left" style="padding-top: 25px; padding-bottom: 25px;">
+                        <p class="margin-b-0 sm-text">                            
+                            {% trans "developed_by" %} 
+                            <a href="https://www.fabiocordeiroaraujo.com/"><strong>Fabio Araujo</strong></a>
+                            | {% trans "theme" %} 
+                            <a class="fweight-700" href="http://keenthemes.com/preview/aircv/">Aircv</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">⇧</a>
+
+        <script src="{% static 'js/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery-migrate.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery.easing.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery.back-to-top.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery.smooth-scroll.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery.wow.min.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery.parallax.min.js' %}"></script>
+        <script src="{% static 'js/jquery/jquery.appear.js' %}"></script>
+        <script src="{% static 'masonry/jquery.masonry.pkgd.min.js' %}"></script>
+        <script src="{% static 'masonry/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'js/layout/layout.min.js' %}"></script>
+        <script src="{% static 'js/components/progress-bar.min.js' %}"></script>
+        <script src="{% static 'js/components/masonry.min.js' %}"></script>
+        <script src="{% static 'js/components/wow.min.js' %}"></script>
+    </body>
+</html>

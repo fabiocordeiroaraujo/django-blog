@@ -1,0 +1,105 @@
+{% load static %}
+{% load i18n %}
+<div id="depoimentos">   
+    <div class="container content-lg" style="padding-top: 0px;">
+        <div class="row">
+            <div class="col-sm-2 sm-margin-b-30" style="padding-top: 100px;">
+                <div class="text-right sm-text-left">
+                    <h2 class="margin-b-0">{% trans "testimony" %}</h2>
+                    <p>{% trans "dear_patients" %}</p>
+                </div>
+            </div>            
+            <div class="col-sm-9 col-sm-offset-1" style="padding-top: 30px;">                                                                                   
+                <div style="padding-top: 10px;">                                       
+                    <div class="customer-feedback mySlides">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="owl-carousel feedback-slider">
+                                        <div class="feedback-slider-item">
+                                            <img src="{% static 'img/perfil-1.png' %}" class="center-block img-circle testimonial border-dark" alt="Customer Feedback">
+                                            <h3 class="customer-name">Fabio Araujo</h3>
+                                            <p>{% trans "fabio_testimony" %}</p>                                    
+                                        </div>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer-feedback mySlides">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="owl-carousel feedback-slider">
+                                        <div class="feedback-slider-item">
+                                            <img src="{% static 'img/perfil-3.png' %}" class="center-block img-circle testimonial border-dark" alt="Customer Feedback">
+                                            <h3 class="customer-name">Thayse Gomes</h3>
+                                            <p>{% trans "thayse_testimony" %}
+                                            </p>                                    
+                                        </div>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer-feedback mySlides">
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="owl-carousel feedback-slider">
+                                        <div class="feedback-slider-item">
+                                            <img src="{% static 'img/perfil-2.png' %}" class="center-block img-circle testimonial border-dark" alt="Customer Feedback">
+                                            <h3 class="customer-name">Maria Cecília</h3>
+                                            <p>{% trans "maria_testimony" %}</p>                                    
+                                        </div>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                        <div class="w3-left w3-hover-text-khaki w3-direction" onclick="plusDivs(-1)">&#10094;</div>
+                        <div class="w3-right w3-hover-text-khaki w3-direction" onclick="plusDivs(1)">&#10095;</div>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                    </div>
+                </div>
+            </div>            
+        </div>     
+        
+
+    </div>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+    </script>

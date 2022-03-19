@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block page_content %}
+<!-- {% get_current_language as LANGUAGE_CODE %} -->
+
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="{{post.cover.name  | cut:'mysite'}}">    
+</div>
+
+<div id="categorie">
+    <div class="container content-blog">    
+        <div class="row blog-categories">
+            <div class="col-md-12" style="padding-left: 0px;">                
+                <ul class="tags" style="list-style-type:none; padding-left: 0px;">
+                    <li class="blog-category">
+                        <strong><a href="{% url 'blog_index' %}#blog">{% trans "todos" %}</a></strong>
+                    </li>
+                    {% for category in post.categories.all %}
+                        <li class="blog-category"> |
+                            <a href="{% url 'blog_category' category.name %}#blog">
+                                {% trans category.name %}
+                            </a>
+                        </li>
+                    {% endfor %}                
+                </ul>
+            </div>                       
+        </div>        
+    </div>
+</div>
+
+<div id="post">
+    <div class="bg-color-sky-light">
+        <div class="container content-sm">            
+            <div class="row blog-title">
+                <h2>{{ post.title }}</h2>
+            </div>      
+            <div class="row blog-body">
+                <p>{{ post_body | safe }}</p>
+            </div>      
+            <div class="row blog-info">
+                <span class="autor"><i class="fas fa-fw fa-user"></i> Fabio Araujo</span>
+                <span class="divider">|</span>
+                <span class="date"><i class="fas fa-fw fa-clock-o"></i>{{ date }}</span>
+                <!-- Share Buttons -->
+                <div class="btn-group share-buttons pull-right hidden-xs">
+                    <a href="#" target="_blank" class="btn"><i class="fab fa-facebook"></i> </a>
+                    <a href="#" target="_blank" class="btn"><i class="fab fa-twitter"></i> </a>
+                    <a href="#" target="_blank" class="btn"><i class="fab fa-dribbble"></i> </a>
+                </div>
+                <!-- /Share Buttons -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="form">
+    <div class="container content-sm">            
+        <div class="row blog-comments-form">  
+            <h3>{% trans "deixe_comentatio" %}:</h3>
+            <form action="{% url 'blog_detail' post.url %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form.author }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form.email }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            {{ form.body }}
+                        </div>
+                    </div>
+                </div>
+                                
+                <button type="submit" class="btn btn-primary">{% trans "enviar" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="comments">
+    <div class="bg-color-sky-light">
+        <div class="container content-sm">    
+            <div class="row blog-comments">  
+                <div class="media">
+                    <div class="block-title">
+                        <h3>{% trans "comentarios" %} ({{ comments | length }})</h3>
+                    </div>
+                    {% for comment in comments %}
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="{{ comment.gravatar_url }}" alt="">
+                    </a>     
+                    <div class="media-body">
+                        <div class="media-heading">
+                            <a href="#">{{ comment.author }}</a> <span class="divider">|</span> <span class="light-gray">{{comment.created_on.date }}</span>
+                        </div>
+                        <p>{{ comment.body }}</p>
+                    </div>                   
+                    
+                    <hr>
+                    {% endfor %}  
+                </div>   
+            </div> 
+        </div>
+    </div>
+</div>
+
+{% endblock %}

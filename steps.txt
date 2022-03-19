@@ -1,0 +1,17 @@
+01) mkvirtualenv blog-portfolio
+02) pip3 install --upgrade pip
+03) pip3 install django 
+04) pip3 install Markdown
+05) pip3 install Pillow
+06) django-admin startproject django-blog 
+07) python manage.py makemigrations
+08) python manage.py migrate
+09) python manage.py collectstatic
+10) python manage.py createsuperuser
+    - user: admin
+    - password: admin123456
+11) python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemessages --locale=pt_br
+python manage.py compilemessages
+
