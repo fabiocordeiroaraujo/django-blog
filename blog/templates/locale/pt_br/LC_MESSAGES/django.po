@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-18 20:02+0000\n"
+"POT-Creation-Date: 2023-02-20 23:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,17 +30,14 @@ msgstr ""
 msgid "blog"
 msgstr ""
 
-#: blog/templates/blog_category.html:32 blog/templates/blog_index.html:31
+#: blog/templates/blog_category.html:32 blog/templates/blog_detail.html:16
+#: blog/templates/blog_index.html:31
 msgid "todos"
 msgstr "Todos"
 
 #: blog/templates/blog_category.html:49 blog/templates/blog_index.html:44
 msgid "de"
 msgstr "de"
-
-#: blog/templates/blog_detail.html:14
-msgid "return"
-msgstr "Voltar"
 
 #: blog/templates/blog_detail.html:59
 msgid "deixe_comentatio"
@@ -54,8 +51,11 @@ msgstr "Enviar"
 msgid "comentarios"
 msgstr "Comentários"
 
-msgid "evaluation"
-msgstr "Avaliação"
+#~ msgid "return"
+#~ msgstr "Voltar"
 
-msgid "health"
-msgstr "Saúde"
+#~ msgid "evaluation"
+#~ msgstr "Avaliação"
+
+#~ msgid "health"
+#~ msgstr "Saúde"

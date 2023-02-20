@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.utils import  translation
-from django.utils.translation import ugettext
+from django.utils import translation
+from django.utils.translation import gettext_lazy as _
 from blog.models import Post, Comment, Category
 from .forms import CommentForm
 
@@ -53,7 +53,7 @@ def blog_detail(request, url):
                 comment.save()
 
     comments = Comment.objects.filter(post=post)
-    month_name = ugettext(post.created_on.strftime("%B"))
+    month_name = _(post.created_on.strftime("%B"))
     form = CommentForm()
 
     context = {
