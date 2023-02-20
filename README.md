@@ -1,5 +1,8 @@
-# django-blog
+# Project
+
 Personal blog written with Python/Django
+
+# Steps for run
 
 01) mkvirtualenv blog-portfolio
 02) pip3 install --upgrade pip
